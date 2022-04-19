@@ -1,0 +1,105 @@
+#modal-container{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0
+}
+#modal-container .modal {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background-color: #ffffff;
+    width: 500px;
+    height: 450px;
+    border-radius: 1rem;
+    z-index: 10000;
+    align-items: center;
+    flex-direction: column;
+}
+#modal-container h5,
+#modal-container h6{
+    margin:0;
+}
+#modal-container p{
+    margin: 0;
+    display: inline-block;
+}
+
+.close-modal{
+    height: 15px;
+    width: 15px;
+    font-size: 12px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    border: 1px solid;
+    text-align: center;
+    border-radius: 50%;
+}
+
+.image-modal{
+    position: absolute;
+    top: -85px;
+    width: 170px;
+    height: 170px;
+    background: var(--secundary-support-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.image-modal img{
+    border-radius: 50%;
+}
+
+.name-patient{
+    margin-bottom: 1rem;
+}
+
+.info-detail:not(:first-child){
+    margin: 5px 0;
+    border-top: 1px solid #c4c4c4;
+    padding: 5px 0 ;
+}
+
+.copy-url{
+    position: absolute;
+    bottom: 2rem;
+    font-size: 1rem;
+    background-color: var(--primary-support-color);
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    color:#ffffff;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.copy-url:active{
+    background-color: var(--primary-color);
+    
+}
+
+.confirmed-copy{
+    display: none;
+
+}
+
+.copy-url:active + .confirmed-copy{
+    display: block;
+    position: absolute;
+    bottom: 65px;
+    left: 290px;
+    background-color: rgba(0,0,0,0.5);
+    padding: 3px;
+    border-radius: 4px;
+}

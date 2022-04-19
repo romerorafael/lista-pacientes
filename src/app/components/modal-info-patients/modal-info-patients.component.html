@@ -1,0 +1,36 @@
+<div id="modal-container">
+  <div class="modal">
+    <div class="close-modal" (click)="closeModal()">X</div>
+    <div class="image-modal">
+      <img [src]="infoPatient.picture.large" alt="">
+    </div>
+    <div class="name-patient">
+      <h5>{{infoPatient.name.first}} {{infoPatient.name.last}}  </h5>
+      <small>({{infoPatient.login.username}})</small>
+    </div>
+    <div class="details-patient">
+      <div class="info-detail">
+        <h6>Email: </h6>
+        <p> {{infoPatient.email}}</p>
+      </div>
+      <div class="info-detail">
+        <h6>Data de nascimento: </h6>
+        <p> {{this.infoPatient.dob.date | date:'dd/MM/yyyy'}}</p>
+      </div>
+      <div class="info-detail">
+        <h6>Telefone: </h6>
+        <p> {{infoPatient.phone}}</p>
+      </div>
+      <div class="info-detail">
+        <h6>Nacionalidade: </h6>
+        <p> {{infoPatient.nat}}</p>
+      </div>
+      <div class="info-detail">
+        <h6>Endereço: </h6>
+        <p> {{infoPatient.location.street.name}}, {{infoPatient.location.street.number}}</p>
+      </div>
+    </div>
+    <button class="copy-url" (click)="copyUrl()">Copiar link do usuário</button>
+    <small class="confirmed-copy">Copiado com sucesso</small>
+  </div>
+</div>

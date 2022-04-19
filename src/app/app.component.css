@@ -1,0 +1,82 @@
+.main-container{
+    width: 100vw;
+    background-color: var(--secundary-support-color);
+}
+
+header{
+    width: 100vw;
+    height: 7vh;
+    background-color: var(--primary-color) ;
+}
+nav{
+    width: 100vW;
+    height: 10vh;
+    background-color: var(--secundary-color) ;
+}
+.table-container{ 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.search-input{
+    width: 100%;
+    height: 20px;
+    padding: 15px;
+}
+
+/*Table Region*/
+.patients-table{
+    width: 100%;
+    margin-top: 1rem;
+    background-color: #ffffff;
+    border-collapse: collapse;
+
+}
+.patients-table td,
+.patients-table th{
+    border: 1px solid #000000;
+    text-align: center;
+    padding: 10px;
+}
+.patients-table tr:nth-child(even),
+.patients-table th{
+    color: #ffffff;
+    background-color: var(--primary-support-color);
+}
+
+/*Buttons Region*/
+.button-show-more{
+    background: none;
+    border: none;
+    font-size: 1rem;
+    margin-top: 1rem;
+    color: #000000;
+}
+.button-show-more:hover{
+    cursor: pointer;
+}
+.button-more-details{
+    border-radius: 15px;
+    border: 1px solid;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+    .patients-table thead{
+        display: none;
+    }
+
+    .patients-table tr{
+        border-bottom: 1px solid #000000;
+    }
+
+    .patients-table td{
+        border: none;
+    }
+
+    .patients-table td:not(:first-child){
+        display: block;
+    }
+}
